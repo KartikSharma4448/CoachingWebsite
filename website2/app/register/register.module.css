@@ -1,0 +1,190 @@
+.main {
+  background-color: #FFF9F0;
+  min-height: 100vh;
+}
+
+.registerSection {
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.bgDecor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  clip-path: ellipse(80% 50% at 50% 0%);
+  z-index: 1;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 32px;
+  padding: 50px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+  border: 1px solid #eee;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.badge {
+  display: inline-block;
+  background-color: rgba(255,107,53,0.1);
+  color: var(--primary);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.header h1 {
+  font-size: 36px;
+  color: var(--dark);
+  margin-bottom: 12px;
+}
+
+.header p {
+  color: var(--text-light);
+  font-size: 16px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inputGroup label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.inputGroup label svg {
+  color: var(--primary);
+}
+
+.inputGroup input,
+.inputGroup select,
+.inputGroup textarea {
+  padding: 14px 18px;
+  border: 2px solid #f0f0f0;
+  border-radius: 12px;
+  font-size: 15px;
+  font-family: inherit;
+  transition: var(--transition);
+  background-color: #fafafa;
+}
+
+.inputGroup input:focus,
+.inputGroup select:focus,
+.inputGroup textarea:focus {
+  border-color: var(--primary);
+  background-color: white;
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(255,107,53,0.1);
+}
+
+.inputGroup.fullWidth {
+  grid-column: span 2;
+}
+
+.inputGroup textarea {
+  resize: vertical;
+}
+
+.footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.submitBtn {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 18px 40px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+  width: 100%;
+}
+
+.submitBtn:hover {
+  background-color: var(--primary-light);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255,107,53,0.3);
+}
+
+.note {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 16px;
+  line-height: 1.5;
+}
+
+.successMessage {
+  text-align: center;
+  padding: 40px 0;
+}
+.successIcon {
+  font-size: 80px;
+  color: var(--green);
+  margin-bottom: 24px;
+}
+.successMessage h2 {
+  font-size: 32px;
+  color: var(--dark);
+  margin-bottom: 12px;
+}
+.successMessage p {
+  color: var(--text-light);
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    padding: 30px 20px;
+    border-radius: 20px;
+  }
+  .header h1 {
+    font-size: 26px;
+  }
+  .registerSection { padding: 40px 0; }
+  .bgDecor { height: 250px; }
+}

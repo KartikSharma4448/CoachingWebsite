@@ -1,0 +1,68 @@
+.about { padding: 80px 0; background: var(--white); }
+.container { max-width: 1280px; margin: 0 auto; padding: 0 20px; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+
+.left { position: relative; }
+
+.imageGrid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+}
+.imgCard {
+  border-radius: 20px; overflow: hidden; text-align: center;
+  display: flex; flex-direction: column; align-items: center; gap: 0;
+  transition: var(--transition);
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+.imgCard:hover { transform: translateY(-5px); }
+.imgCard img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+.imgCard p { 
+  font-weight: 600; 
+  color: var(--dark); 
+  font-size: 14px; 
+  padding: 12px;
+}
+.img1 { grid-row: span 2; }
+.img1 img { height: 340px; }
+
+.expBadge {
+  position: absolute; bottom: -20px; right: 20px;
+  background: var(--primary); color: var(--white);
+  border-radius: 20px; padding: 20px 28px;
+  display: flex; align-items: center; gap: 12px;
+  box-shadow: 0 10px 30px rgba(255,107,53,0.3);
+  animation: pulse 3s ease-in-out infinite;
+}
+.expNum { font-size: 36px; font-weight: 800; }
+.expText { font-size: 13px; line-height: 1.3; font-weight: 500; }
+
+.right {}
+.title { font-size: clamp(28px, 3.5vw, 40px); color: var(--dark); margin-bottom: 20px; line-height: 1.2; }
+.desc { color: var(--text-light); line-height: 1.8; margin-bottom: 24px; font-size: 16px; }
+
+.features { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 32px; }
+.feature {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 16px; background: var(--gray-light);
+  border-radius: 12px; font-weight: 500; font-size: 14px;
+}
+.featureIcon { font-size: 18px; }
+
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+  .imageArea { order: -1; }
+  .features { justify-content: center; }
+  .left { max-width: 450px; margin: 0 auto; }
+}
+
+@media (max-width: 600px) {
+  .title { font-size: 28px; }
+  .stats { flex-direction: column; gap: 20px; align-items: center; }
+  .experience { position: static; transform: none; margin-top: 20px; }
+  .features { grid-template-columns: 1fr; }
+  .emoji { font-size: 48px; }
+}

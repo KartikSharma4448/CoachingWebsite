@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /.next
+
+Sitemap: https://yourdomain.com/sitemap.xml
+
+# Crawl delay to be respectful to server resources
+Crawl-delay: 1

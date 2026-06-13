@@ -1,0 +1,27 @@
+{
+  "name": "Atharva Coaching Classes",
+  "description": "Professional website for Atharva Coaching Classes",
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "framework": "nextjs",
+  "public": false,
+  "env": [
+    {
+      "key": "NEXT_PUBLIC_CONTACT_EMAIL",
+      "description": "Contact email address",
+      "value": "info@atharvaclasses.com"
+    },
+    {
+      "key": "NEXT_PUBLIC_PHONE",
+      "description": "Contact phone number",
+      "value": "+91-XXX-XXX-XXXX"
+    }
+  ],
+  "regions": ["iad1"],
+  "functions": {
+    "api/**/*.ts": {
+      "memory": 1024,
+      "maxDuration": 60
+    }
+  }
+}
